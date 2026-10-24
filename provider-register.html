@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Join HoneyHive as a home-service professional.">
+    <title>Become a Professional | HoneyHive</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="provider-register.css">
+    <script src="provider-register.js" defer></script>
+</head>
+<body id="top">
+    <!-- Shared HoneyHive navigation -->
+    <header class="navbar">
+        <div class="container nav-container">
+            <a href="index.html#home" class="logo honey-logo" aria-label="HoneyHive home">
+                <span class="bee-mark" aria-hidden="true">🐝</span>
+                Honey<span>Hive</span>
+            </a>
+
+            <nav class="nav-links" aria-label="Main navigation">
+                <a href="index.html#home">Home</a>
+                <a href="index.html#services">Services</a>
+                <a href="index.html#how-it-works">How it works</a>
+                <a href="index.html#about">About</a>
+                <a href="admin.html">Admin Dashboard</a>
+                <a href="provider-register.html" class="active" aria-current="page">Become a Professional</a>
+            </nav>
+
+            <div class="nav-actions">
+                <a href="index.html#services" class="btn btn-outline">Explore</a>
+                <a href="index.html#booking" class="btn btn-primary">Book a service ↗</a>
+            </div>
+        </div>
+    </header>
+
+    <main class="provider-page">
+        <section class="provider-intro">
+            <span class="eyebrow">GROW WITH HONEYHIVE</span>
+            <h1>Your skills deserve to <span>shine.</span></h1>
+            <p>Join our hive of home-service professionals. Create your profile so customers can learn about the services you offer.</p>
+            <div class="intro-note">
+                <span aria-hidden="true">🐝</span>
+                <div>
+                    <strong>Every skill makes a difference.</strong>
+                    <p>Plumbing, electrical, painting and carpentry professionals are welcome.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="provider-form-card" aria-labelledby="formTitle">
+            <div class="form-heading">
+                <span class="form-step">PROFESSIONAL PROFILE</span>
+                <h2 id="formTitle">Register as a professional</h2>
+                <p>Fill in your details below. Fields marked * are required.</p>
+            </div>
+
+            <form id="providerForm">
+                <div class="field">
+                    <label for="providerName">Full name *</label>
+                    <input id="providerName" name="providerName" type="text"
+                           placeholder="e.g. Ali Khan" minlength="2" maxlength="80"
+                           autocomplete="name" required>
+                </div>
+
+                <div class="field-row">
+                    <div class="field">
+                        <label for="providerPhone">Phone number *</label>
+                        <input id="providerPhone" name="providerPhone" type="tel"
+                               placeholder="03XX XXXXXXX" maxlength="20"
+                               autocomplete="tel" inputmode="tel" required>
+                    </div>
+                    <div class="field">
+                        <label for="providerEmail">Email address</label>
+                        <input id="providerEmail" name="providerEmail" type="email"
+                               placeholder="you@example.com" maxlength="120"
+                               autocomplete="email">
+                    </div>
+                </div>
+
+                <div class="field-row">
+                    <div class="field">
+                        <label for="providerService">Your main skill *</label>
+                        <select id="providerService" name="providerService" required>
+                            <option value="">Choose your skill</option>
+                            <option value="Plumbing">Plumbing</option>
+                            <option value="Electrical">Electrical</option>
+                            <option value="Painting">Painting</option>
+                            <option value="Carpentry">Carpentry</option>
+                            <option value="Other">Other</option>
+                        </select>
+                    </div>
+                    <div class="field">
+                        <label for="providerExperience">Experience *</label>
+                        <select id="providerExperience" name="providerExperience" required>
+                            <option value="">Select experience</option>
+                            <option value="Beginner">Beginner / less than 1 year</option>
+                            <option value="1–2 years">1–2 years</option>
+                            <option value="3–5 years">3–5 years</option>
+                            <option value="6+ years">6+ years</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="field">
+                    <label for="providerArea">City / service area *</label>
+                    <input id="providerArea" name="providerArea" type="text"
+                           placeholder="e.g. Sheikhupura" minlength="2" maxlength="120"
+                           autocomplete="address-level2" required>
+                </div>
+
+                <div class="field">
+                    <label for="providerDetails">Tell customers about your work</label>
+                    <textarea id="providerDetails" name="providerDetails" rows="4"
+                              maxlength="600"
+                              placeholder="Describe your skills, the work you do, or tools you specialize in..."></textarea>
+                    <small>Optional — up to 600 characters.</small>
+                </div>
+
+                <label class="availability-option">
+                    <input id="providerAvailable" name="providerAvailable" type="checkbox" checked>
+                    <span>
+                        <strong>I'm currently available for work</strong>
+                        <small>You can change your availability later in a future dashboard.</small>
+                    </span>
+                </label>
+
+                <button class="submit-button" type="submit">Create professional profile <span aria-hidden="true">→</span></button>
+                <p class="privacy-note">Demo version: profile data is saved in this browser only. This form does not create a secure account or verify professional credentials.</p>
+            </form>
+
+            <div id="providerSuccess" class="success-panel" role="status" aria-live="polite" hidden>
+                <div class="success-icon" aria-hidden="true">✓</div>
+                <h2>Welcome to the hive!</h2>
+                <p id="providerSuccessMessage"></p>
+                <button id="registerAnother" class="secondary-button" type="button">Register another professional</button>
+                <a class="dashboard-link" href="index.html">Back to HoneyHive homepage →</a>
+            </div>
+        </section>
+    </main>
+
+    <!-- Shared HoneyHive footer -->
+    <footer class="honey-footer">
+        <div class="container">
+            <div class="honey-footer-main">
+                <div class="honey-footer-brand">
+                    <a href="index.html#home" class="honey-footer-logo">
+                        <span aria-hidden="true">🐝</span>
+                        Honey<span>Hive</span>
+                    </a>
+                    <p class="honey-footer-tagline">Your Home, Our Hive.</p>
+                    <p class="honey-footer-description">
+                        Bringing home services together, one little task at a time.
+                        Inspired by the teamwork of honeybees and the comfort of home.
+                    </p>
+                    <div class="honey-footer-motto">
+                        <span aria-hidden="true">💛</span>
+                        Every home deserves care.
+                    </div>
+                </div>
+
+                <div class="honey-footer-column">
+                    <h3>Explore</h3>
+                    <a href="index.html#home">Home</a>
+                    <a href="index.html#about">About HoneyHive</a>
+                    <a href="index.html#services">Our services</a>
+                    <a href="index.html#how-it-works">How it works</a>
+                    <a href="index.html#booking">Book a service</a>
+                </div>
+
+                <div class="honey-footer-column">
+                    <h3>Our services</h3>
+                    <a href="index.html#booking" data-service="Plumbing">🔧 Plumbing</a>
+                    <a href="index.html#booking" data-service="Electrical">⚡ Electrical</a>
+                    <a href="index.html#booking" data-service="Painting">🎨 Painting</a>
+                    <a href="index.html#booking" data-service="Carpentry">🪚 Carpentry</a>
+                </div>
+
+                <div class="honey-footer-column">
+                    <h3>Quick access</h3>
+                    <a href="index.html#booking">Request a service</a>
+                    <a href="admin.html">Bookings dashboard</a>
+                    <a href="provider-register.html">Become a Professional</a>
+                    <a href="index.html#about">Our story</a>
+                    <div class="honey-footer-note">
+                        <span aria-hidden="true">🐝</span>
+                        <p>Inspired by hardworking bees and the power of working together.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="honey-footer-bottom">
+                <p>© <span id="honeyYear">2026</span> HoneyHive. Built with care for every home.</p>
+                <a href="#top" class="honey-back-top">Back to top ↑</a>
+            </div>
+            <p class="honey-footer-disclaimer">
+                HoneyHive is a home services booking demo. Professional profiles are saved in this browser only.
+            </p>
+        </div>
+    </footer>
+</body>
+</html>
